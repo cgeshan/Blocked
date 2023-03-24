@@ -48,7 +48,7 @@ Navigate into wxWidgets subdirectory
 ```
 ```console
 
-	  $ git submodule update –init
+	  $ git submodule update --init
 
 ```
 ```text
@@ -56,7 +56,7 @@ Navigate into wxWidgets subdirectory
 ```
 ```console
 
-	  $ git submodule update –init
+	  $ git submodule update –-init
 
 ```
 **Building the application**               
