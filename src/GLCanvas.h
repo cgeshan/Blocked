@@ -21,26 +21,38 @@
 class GLCanvas : public wxGLCanvas 
 {
 private:
-    bool initialized;
-
-    wxTimer *timer;
-    // DECLARE_EVENT_TABLE();
+    wxGLContext *glContext;
+    GLfloat v[8][3];
+    GLint faces[6][4] = {  /* Vertex indices for the 6 faces of a cube. */
+        {0, 1, 2, 3}, {3, 2, 6, 7}, {7, 6, 5, 4},
+        {4, 5, 1, 0}, {5, 6, 2, 1}, {7, 4, 0, 3} };
     
 public:
-    GLCanvas(wxPanel *parent, wxWindowID id = wxID_ANY, 
-    const wxPoint &pos = wxDefaultPosition, 
-    const wxSize &size = wxDefaultSize, long style = 0, 
-    const wxString &name = "GLCanvas");
-
-    ~GLCanvas();
+    GLCanvas(wxPanel *parent, int *args);
+    virtual ~GLCanvas();
     
-    // GLvoid displayFPS(GLvoid);
-
     // Event handlers
-    void OnIdle(wxIdleEvent &event);
-    void OnEraseBackground(wxEraseEvent &event);
-    void OnTimer(wxTimerEvent &event);
+        void glBindEventHandlers();
+        void resized(wxSizeEvent& evt);
+    
+	int getWidth();
+	int getHeight();
+    
+	void render(wxPaintEvent& evt);
+	void prepare3DViewport(int topleft_x, int topleft_y, int bottomrigth_x, int bottomrigth_y);
+	void prepare2DViewport(int topleft_x, int topleft_y, int bottomrigth_x, int bottomrigth_y);
+    
+	// events
+	void mouseMoved(wxMouseEvent& event);
+	void mouseDown(wxMouseEvent& event);
+	void mouseWheelMoved(wxMouseEvent& event);
+	void mouseReleased(wxMouseEvent& event);
+	void rightClick(wxMouseEvent& event);
+	void mouseLeftWindow(wxMouseEvent& event);
+	void keyPressed(wxKeyEvent& event);
+	void keyReleased(wxKeyEvent& event);
 
+     DECLARE_EVENT_TABLE()
 };
 
 #endif 
