@@ -47,7 +47,11 @@ Run the following command (this will take some time)
   Run the same command again to update the submodules
 ```console
 
+<<<<<<< HEAD
 	  $ git submodule update --init
+=======
+	  $ git submodule update –-init
+>>>>>>> bc699d018ab6c226315da0dd5f270afabfe01503
 
 ```
 **Building the application**               

@@ -1,6 +1,13 @@
 if(MSVC)
+<<<<<<< HEAD
 	set(EXE_TYPE WIN32)
 	set(ADDITIONAL winmain.cpp)
+=======
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS)
+endif()
+
+add_executable(App MACOSX_BUNDLE App.cpp App.h MainWindow.cpp MainWindow.h GLCanvas.cpp GLCanvas.h)
+>>>>>>> bc699d018ab6c226315da0dd5f270afabfe01503
 
 	add_custom_command(
 		TARGET App POST_BUILD
