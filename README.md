@@ -18,14 +18,12 @@ Instructions for building the application, please see [install.md](https://ramen
 Team Members: 
 
    - [Abraham George](https://www.linkedin.com/in/abraham-george-897818184/)
+   
    - [Amirpouya Hemmasian](https://www.linkedin.com/in/amirpouya-hemmasian/)
 
+   - [Charlotte Avra](https://charlotteavra.com)
 
-   - [Charlotte Avra](https://www.linkedin.com/in/charlotteavra/)
-
-
-   - [Connor Geshan](https://www.linkedin.com/in/connorgeshan/)
-
+   - [Connor Geshan](https://cgeshan.github.io)
 
    - [Yayati Jadhav](https://www.linkedin.com/in/yayatij/)
    
