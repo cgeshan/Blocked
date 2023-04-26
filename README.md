@@ -22,7 +22,7 @@ Team Members:
    - [Charlotte Avra](https://www.linkedin.com/in/charlotteavra/)
 
 
-   - [Connor Geshan](https://www.linkedin.com/in/connorgeshan/)
+   - [Connor Geshan](https://cgeshan.github.io)
 
 
    - [Yayati Jadhav](https://www.linkedin.com/in/yayatij/)
