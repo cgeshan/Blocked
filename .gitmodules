@@ -1,3 +1,6 @@
 [submodule "wxWidgets"]
 	path = wxWidgets
-	url = https://github.com/wxWidgets/wxWidgets
+	url = https://github.com/wxWidgets/wxWidgets.git
+[submodule "public"]
+	path = public
+	url = https://github.com/captainys/public.git

@@ -1,5 +1,3 @@
-## Project is currently in development, please check back for updates. This note will be removed when project is finished. 
-
 # **About**
 Our proposed program is motivated by an engineering problem that we are facing in the Mechanical and Artificial Intelligence Lab [(MAIL)](), where we are working on additive manufacturing using a drone. For the project, we are planning to have the drone assemble structures out of pre-manufactured (through 3D printing) building blocks. However, in order to do this, we need to have a way of taking the goal structure (in the form of an STL file) and figuring out how best to build it out of a set of predefined blocks.
 
@@ -18,12 +16,14 @@ Instructions for building the application, please see [install.md](https://ramen
 Team Members: 
 
    - [Abraham George](https://www.linkedin.com/in/abraham-george-897818184/)
-   
    - [Amirpouya Hemmasian](https://www.linkedin.com/in/amirpouya-hemmasian/)
 
-   - [Charlotte Avra](https://charlotteavra.com)
 
-   - [Connor Geshan](https://cgeshan.github.io)
+   - [Charlotte Avra](https://www.linkedin.com/in/charlotteavra/)
+
+
+   - [Connor Geshan](https://www.linkedin.com/in/connorgeshan/)
+
 
    - [Yayati Jadhav](https://www.linkedin.com/in/yayatij/)
    

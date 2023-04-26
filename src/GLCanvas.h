@@ -1,58 +1,61 @@
+/* Author: Connor Geshan */
+
 #ifndef GLCANVAS_IS_INCLUDED
 #define GLCANVAS_IS_INCLUDED
-
-#ifdef WIN32 
-    #define WIN32_LEAN_AND_MEAN
-    #include <windows.h>
-#endif
-
-#if defined(__APPLE__) && defined(__MACH__)
-    #include <OpenGL/gl.h>
-    #include <OpenGL/glu.h>
-#else
-    #include <GL/gl.h>
-    #include <GL/glu.h>
-#endif
 
 #include "wx/wx.h"
 #include "wx/glcanvas.h"
 
+#include "ysclass.h"
+#include "Block.h"
 
 class GLCanvas : public wxGLCanvas 
 {
 private:
     wxGLContext *glContext;
-    GLfloat v[8][3];
-    GLint faces[6][4] = {  /* Vertex indices for the 6 faces of a cube. */
-        {0, 1, 2, 3}, {3, 2, 6, 7}, {7, 6, 5, 4},
-        {4, 5, 1, 0}, {5, 6, 2, 1}, {7, 4, 0, 3} };
+	wxString STLPath;
+
+protected:
     
 public:
     GLCanvas(wxPanel *parent, int *args);
     virtual ~GLCanvas();
     
-    // Event handlers
-        void glBindEventHandlers();
-        void resized(wxSizeEvent& evt);
+    // Getters
+	int GetWidth();
+	int GetHeight();
     
-	int getWidth();
-	int getHeight();
-    
-	void render(wxPaintEvent& evt);
-	void prepare3DViewport(int topleft_x, int topleft_y, int bottomrigth_x, int bottomrigth_y);
-	void prepare2DViewport(int topleft_x, int topleft_y, int bottomrigth_x, int bottomrigth_y);
-    
-	// events
-	void mouseMoved(wxMouseEvent& event);
-	void mouseDown(wxMouseEvent& event);
-	void mouseWheelMoved(wxMouseEvent& event);
-	void mouseReleased(wxMouseEvent& event);
-	void rightClick(wxMouseEvent& event);
-	void mouseLeftWindow(wxMouseEvent& event);
-	void keyPressed(wxKeyEvent& event);
-	void keyReleased(wxKeyEvent& event);
+	// Event handlers
+	void Render(wxPaintEvent &evt);
+    void Resized(wxSizeEvent &evt);
+	void LeftMouseDown(wxMouseEvent &evt);
+	void KeyPressed(wxKeyEvent &evt);
 
-     DECLARE_EVENT_TABLE()
+	// STL Helpers
+	std::vector <float> vtx, nom, col;
+	void SetSTLPath(wxString filename);
+
+	// Rendering state machine
+	bool noRender, stlRender, blockRender, zoom;
+	
+	// Rendering
+	YsMatrix4x4 viewAngle;
+	YsMatrix4x4 Rkey;
+	YsMatrix4x4 tfm;
+	const double PI = 3.14159265358979323;
+	bool needsRendered;
+	double viewDist;
+
+	void PushXYZ(std::vector <float> &vtx, float x, float y, float z);
+	void PushRGBA(std::vector <float> &col, float r, float g, float b, float a);
+	void GetBoundingBox(YsVec3 bbx[2], const std::vector <float> &vtx);
+	bool ReadBinarySTL(std::vector <float> &vtx, std::vector <float> &nom, const char fName[]);
+	void MakeShape(std::vector <float> &vtx, std::vector <float> &nom, std::vector <float> &col, std::vector <std::vector <Block>> &blocks, int sliderValue, int state);
+	void AddColor(std::vector <float> &col, float red, float green, float blue);
+	void MakeBlock(std::vector <float> &vtx, std::vector <float> &nom,  Block &b, float layerHeight);
+	void Clear();
+
+    DECLARE_EVENT_TABLE()
 };
 
 #endif 
