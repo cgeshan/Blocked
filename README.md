@@ -8,6 +8,8 @@ To achieve this goal, the proposed program seeks to convert an STL file into ins
 # **Platforms**
 This is a cross-platform application which utilizes C++ 17 Standard specific features, CMake version 3.8 or newer, OpenGL, and wxWidgets. 
 
+This game also uses the following libraries from [CaptainYS](https://github.com/captainys)
+
 # **Building**
 
 Instructions for building the application, please see [install.md](https://github.com/cgeshan/Blocked/blob/main/install.md). 
