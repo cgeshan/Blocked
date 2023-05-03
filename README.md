@@ -10,7 +10,7 @@ This is a cross-platform application which utilizes C++ 17 Standard specific fea
 
 # **Building**
 
-Instructions for building the application, please see [install.md](https://ramennoodle.me.cmu.edu/Bonobo.Git.Server/Repository/Blob/23a02626-3ed4-4dd4-8157-cbf7628ddb97?encodedName=master&encodedPath=install.md). 
+Instructions for building the application, please see [install.md](https://github.com/cgeshan/Blocked/blob/main/install.md). 
 
 # **More Information**
 Team Members: 
