@@ -20,12 +20,12 @@ Install GTK3 (GTK 3 is an old release, unknown if wxWidgets is compatible with G
 ## MAC OS X
 -------------------
 
-Smile, you don’t have anything to do. Way to go Steve Jobs	
+No additional wxWidgets dependencies required
 
 ## Windows
 -------------------
 
-Smile, you don’t have anything to do. Way to go Bill Gates
+No additional wxWidgets dependencies required
 
 # **Cloning the repository**
 Below are common instructions for cloning our repository
