@@ -32,13 +32,13 @@ Below are common instructions for cloning our repository
 
 Clone the Unoptimized repository
 
-```console
-	  $ git clone https://ramennoodle.me.cmu.edu/Bonobo.Git.Server/Unoptimized.git
+```
+	git clone https://ramennoodle.me.cmu.edu/Bonobo.Git.Server/Unoptimized.git
 ```
 Navigate into Unpotimized subdirectory
 
-```console
-	$ cd Unoptimized
+```
+	cd Unoptimized
 ```
 
 Run the following command (this will take some time)
@@ -56,7 +56,7 @@ Navigate into wxWidgets subdirectory
 Run the update command again to update the submodules
 
 ```
-	git submodule update –-init
+	git submodule update --init
 ```
 
 **Building the application**               
