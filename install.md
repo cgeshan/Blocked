@@ -8,14 +8,14 @@ Please see the below installation instructions for wxWidgets dependencies needed
 -------------------
 Install meson and ninja by running the following commands
 
-```console
-    $ sudo apt-get install meson ninja-build
+```
+	sudo apt-get install meson ninja-build
 ```
 
 Install GTK3 (GTK 3 is an old release, unknown if wxWidgets is compatible with GTK4)
 
-```console
-    $ sudo apt-get install libgtk-3-dev
+```
+	sudo apt-get install libgtk-3-dev
 ```
 ## MAC OS X
 -------------------
@@ -43,20 +43,20 @@ Navigate into Unpotimized subdirectory
 
 Run the following command (this will take some time)
 
-```console
-	  $ git submodule update -–init
+```
+	git submodule update -–init
 ```
 
 Navigate into wxWidgets subdirectory
 
-```console
-	$ cd wxWidgets
+```
+	cd wxWidgets
 ```
 
 Run the update command again to update the submodules
 
-```console
-	  $ git submodule update –-init
+```
+	git submodule update –-init
 ```
 
 **Building the application**               
@@ -65,40 +65,40 @@ Below are instructions for building our application
 
 Create build directory
 
-```console
-	  $ mkdir ../../build
+```
+	mkdir ../../build
 ```
 
 Navigate to build folder
 
-```console
-	  $ cd ../../build
+```
+	cd ../../build
 ```
 
 Generate project make files 
 
-```console
-	  $ cmake ../Unoptimized
+```
+	cmake ../Unoptimized
 ```
 Build application (this will take some time)
-```console
-	  $ cmake --build . --config Release --target App
+```
+	cmake --build . --config Release --target App
 ```
 Start the application 
 #### Linux
 -------------------
-```console
-	  $ ./src/App
+```
+	./src/App
 ```
 #### MAC OS X
 -------------------
 
-```console
-	  $ ./src/App.app/Contents/MacOS/App
+```
+	./src/App.app/Contents/MacOS/App
 ```
 
 #### Windows
 -------------------
-```console
-	  $ src\Release\App.exe
+```
+	src\Release\App.exe
 ```
